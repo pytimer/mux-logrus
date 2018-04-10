@@ -1,3 +1,5 @@
+// Package muxlogrus is a logrus middleware for gorilla/mux.
+// Every request information will be record and output.
 package muxlogrus
 
 import (
@@ -25,7 +27,7 @@ func (rc *realClock) Since(t time.Time) time.Duration {
 	return time.Since(t)
 }
 
-// LogOptions ...
+// LogOptions logging middleware options
 type LogOptions struct {
 	Formatter      logrus.Formatter
 	EnableStarting bool
