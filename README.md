@@ -3,7 +3,7 @@ mux-logrus
 
 [![GoDoc](https://godoc.org/github.com/pytimer/mux-logrus?status.svg)](https://godoc.org/github.com/pytimer/mux-logrus)
 
-logrus middleware for groilla/mux
+logrus middleware for gorilla/mux
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", index).Methods(http.MethodGet)
 
-    // add logger middleware
+        // add logger middleware
 	r.Use(muxlogrus.NewLogger().Middleware)
 
 	address := ":8990"
